@@ -2,7 +2,7 @@
 
 A strong game-playing AI for the two-player strategy board game **Guard & Towers**, written in **Java** with classic symbolic AI techniques: Alpha-Beta search, Zobrist hashing, transposition tables, null-move pruning and move-ordering heuristics.
 
-> Developed in the project course **"Symbolische Künstliche Intelligenz"** (SoSe 2025) at **Technische Universität Berlin**, Fachgebiet AOT, supervised by Dr.-Ing. Stefan Fricke.
+> Developed in the project course **"Symbolische Künstliche Intelligenz"** (SoSe 2025) at **Technische Universität Berlin**, Fachgebiet AOT.
 
 ---
 
@@ -68,8 +68,6 @@ guard-and-towers-ai/
 │   └── tests/       JUnit tests and Minimax benchmark
 ├── client/
 │   └── client.py    Python client for the game server
-└── docs/
-    └── Projektbericht_gruppeV.pdf   project report (German)
 ```
 
 ---

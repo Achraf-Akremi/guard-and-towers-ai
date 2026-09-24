@@ -218,17 +218,6 @@ In test games against earlier versions, the final AI showed more stable openings
 
 ---
 
-## 👥 Team
-
-**Gruppe V** – TU Berlin, SoSe 2025
-
-- [Achraf Akremi](https://github.com/Achraf-Akremi)
-- Mohamed Hedi Ben Brahim
-- Mohamed Rami Ben Moussa
-- Rami Zayati
-
----
-
 ## 📚 References
 
 - TU Berlin PJ KI lecture slides: *KI-Basistechniken für Schach* and *Fortschrittliche KI-Techniken für Schach*

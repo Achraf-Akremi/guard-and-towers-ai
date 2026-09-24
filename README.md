@@ -57,17 +57,16 @@ Guard & Towers is played on a **7×7 board** by two players (red and blue). Each
 
 ```
 guard-and-towers-ai/
-├── src/
-│   ├── main/        Main.java – entry point (GUI and command-line mode)
-│   ├── game/        GamePanel, Board, BoardParser, Mouse, BackgroundPanel
-│   ├── pieces/      Piece, Tower, Guard
-│   ├── ki/          AlphaBetaAI, TranspositionTable, Zobrist
-│   ├── benchmark/   Move, MoveGenerator, MoveFormatter
-│   └── res/piece/   piece images and splash screen
-├── test/
-│   └── tests/       JUnit tests and Minimax benchmark
-├── client/
-│   └── client.py    Python client for the game server
+├── README.md
+└── src/
+    ├── main/        Main.java – entry point (GUI and command-line mode)
+    ├── game/        GamePanel, Board, BoardParser, Mouse, BackgroundPanel
+    ├── pieces/      Piece, Tower, Guard
+    ├── ki/          AlphaBetaAI, TranspositionTable, Zobrist
+    ├── benchmark/   Move, MoveGenerator, MoveFormatter
+    ├── res/piece/   piece images and splash screen
+    ├── tests/       JUnit tests and Minimax benchmark
+    └── client/      client.py – Python client for the game server
 ```
 
 ---
@@ -77,7 +76,7 @@ guard-and-towers-ai/
 ### Prerequisites
 
 - **Java 24** or newer (the release JAR is compiled with JDK 24)
-- For the game-server client: **Python 3** and `pygame`
+- For the game-server client: **Python 3**
 
 ### Option 1: Download the JAR
 
@@ -119,15 +118,18 @@ This is the mode used by the game-server client.
 ### Playing on the game server
 
 ```bash
-pip install pygame
-python client/client.py
+python src/client/client.py
+# or with an explicit path to the JAR:
+python src/client/client.py --jar path/to/game.jar
 ```
 
-Before running it, set `jar_path` in `compute_move_with_java()` so it points to your `game.jar`. The client also needs the course-provided `network.py` in the same folder.
+The client finds `game.jar` automatically if it is placed in `src/client/` or `src/`. You can also set the `GAME_JAR` environment variable. Other options: `--timeout` (default 5 s), `--java` and `--fallback-move`.
+
+The client needs the course-provided `network.py` in the same folder as `client.py`.
 
 ### Running the tests
 
-The tests in `test/tests/` use **JUnit 5**. Add JUnit 5 to your IDE (e.g. IntelliJ IDEA), mark `test/` as a test source root and run them from there.
+The tests in `src/tests/` use **JUnit 5**. Add JUnit 5 to your IDE (e.g. IntelliJ IDEA) and run them from there. They are not part of the `javac` command above, so the main program builds without JUnit.
 
 ---
 
@@ -224,8 +226,6 @@ In test games against earlier versions, the final AI showed more stable openings
 - Mohamed Hedi Ben Brahim
 - Mohamed Rami Ben Moussa
 - Rami Zayati
-
-The full project report (in German) is available in [`docs/Projektbericht_gruppeV.pdf`](docs/Projektbericht_gruppeV.pdf).
 
 ---
 
